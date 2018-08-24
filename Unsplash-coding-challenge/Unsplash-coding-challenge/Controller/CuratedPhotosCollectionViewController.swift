@@ -8,8 +8,11 @@
 
 import UIKit
 
+protocol LastPhotoPositionDelegate {
+    func scrollToCurrentIndex(_ currentIndex: Int)
+}
+
 class CuratedPhotosCollectionViewController: UICollectionViewController {
-    
     fileprivate let unsplashCellIdentifier = "UnsplashPhotoCollectionViewCell"
     fileprivate var unsplashArray = [UnsplashImageSource]()
     var currentPageNumber = 1
@@ -38,6 +41,7 @@ class CuratedPhotosCollectionViewController: UICollectionViewController {
         let detailedPhotoCollectionViewController = storyboard.instantiateViewController(withIdentifier: storyboardId) as! DetailedPhotoViewController
         detailedPhotoCollectionViewController.unsplashArray = unsplashArray
         detailedPhotoCollectionViewController.initialImageIndex = indexPath.row
+        detailedPhotoCollectionViewController.lastPhotoPositionDelegate = self
         self.present(detailedPhotoCollectionViewController, animated: false)
     }
 
@@ -110,4 +114,12 @@ extension CuratedPhotosCollectionViewController {
         currentPageNumber = currentPageNumber + 1
         retrieveCuratedPhotos(currentPageNumber)
     }
+}
+
+extension CuratedPhotosCollectionViewController: LastPhotoPositionDelegate {
+
+    func scrollToCurrentIndex(_ currentIndex: Int) {
+        collectionView?.scrollToItem(at: IndexPath(item: currentIndex, section: 0), at: .top, animated: true)
+    }
+
 }

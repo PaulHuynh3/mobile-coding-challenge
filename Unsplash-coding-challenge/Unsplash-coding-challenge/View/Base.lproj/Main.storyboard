@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -82,10 +83,7 @@
                                 <rect key="frame" x="0.0" y="538" width="320" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ab7-Lz-Wgf" userLabel="full name">
-                                        <rect key="frame" x="62.5" y="5" width="202" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="202" id="iUK-TU-g2M"/>
-                                        </constraints>
+                                        <rect key="frame" x="67.5" y="5" width="192" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -97,6 +95,7 @@
                                     <constraint firstAttribute="height" constant="30" id="PUo-Ny-jiJ"/>
                                     <constraint firstItem="Ab7-Lz-Wgf" firstAttribute="centerX" secondItem="lis-Ne-IwL" secondAttribute="centerX" constant="3.5" id="Ufc-zx-bja"/>
                                     <constraint firstAttribute="bottom" secondItem="Ab7-Lz-Wgf" secondAttribute="bottom" constant="4" id="pOb-Cc-QgS"/>
+                                    <constraint firstItem="Ab7-Lz-Wgf" firstAttribute="width" secondItem="lis-Ne-IwL" secondAttribute="width" multiplier="0.6" id="vyM-bP-Buv"/>
                                 </constraints>
                             </view>
                         </subviews>

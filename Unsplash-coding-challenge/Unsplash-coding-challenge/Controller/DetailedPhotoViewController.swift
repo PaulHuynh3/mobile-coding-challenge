@@ -15,6 +15,8 @@ class DetailedPhotoViewController: UIViewController {
     var unsplashArray: [UnsplashImageSource]!
     var initialImageIndex: Int?
     var photographerName: String?
+    var lastPhotoPositionDelegate: LastPhotoPositionDelegate?
+    var currentImageIndex: Int?
     
     fileprivate let unsplashCellIdentifier = "UnsplashPhotoCollectionViewCell"
     
@@ -36,6 +38,9 @@ class DetailedPhotoViewController: UIViewController {
     
     @IBAction func exitFullScreenTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        if let currentImageIndex = currentImageIndex {
+            lastPhotoPositionDelegate?.scrollToCurrentIndex(currentImageIndex)
+        }
     }
 }
 
@@ -49,6 +54,7 @@ extension DetailedPhotoViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: unsplashCellIdentifier, for: indexPath) as! UnsplashPhotoCollectionViewCell
         let unsplashItem = unsplashArray[indexPath.row]
         nameLabel.text = unsplashItem.photographerName
+        currentImageIndex = indexPath.row
         cell.unsplashImage.loadImageUsingCacheWithUrlString(urlString: unsplashItem.imageString)
         return cell
     }
