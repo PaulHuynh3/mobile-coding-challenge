@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		DA89B516212FA3DF00F94067 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA89B515212FA3DF00F94067 /* AppDelegate.swift */; };
-		DA89B518212FA3DF00F94067 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA89B517212FA3DF00F94067 /* ViewController.swift */; };
 		DA89B51B212FA3DF00F94067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA89B519212FA3DF00F94067 /* Main.storyboard */; };
 		DA89B51D212FA3E000F94067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA89B51C212FA3E000F94067 /* Assets.xcassets */; };
 		DA89B520212FA3E000F94067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA89B51E212FA3E000F94067 /* LaunchScreen.storyboard */; };
+		DAE413D2212FAD4E00CE59D3 /* CuratedPhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE413D1212FAD4E00CE59D3 /* CuratedPhotosCollectionViewController.swift */; };
+		DAE413D5212FAE2000CE59D3 /* UnsplashPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE413D4212FAE2000CE59D3 /* UnsplashPhotoCollectionViewCell.swift */; };
+		DAE413D7212FAEB400CE59D3 /* UnsplashPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAE413D6212FAEB400CE59D3 /* UnsplashPhotoCollectionViewCell.xib */; };
+		DAE413DA212FB26A00CE59D3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE413D9212FB26A00CE59D3 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DA89B512212FA3DF00F94067 /* Unsplash-coding-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unsplash-coding-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA89B515212FA3DF00F94067 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA89B517212FA3DF00F94067 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DA89B51A212FA3DF00F94067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA89B51C212FA3E000F94067 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA89B51F212FA3E000F94067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA89B521212FA3E000F94067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAE413D1212FAD4E00CE59D3 /* CuratedPhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuratedPhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		DAE413D4212FAE2000CE59D3 /* UnsplashPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		DAE413D6212FAEB400CE59D3 /* UnsplashPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnsplashPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		DAE413D9212FB26A00CE59D3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +61,56 @@
 			isa = PBXGroup;
 			children = (
 				DA89B515212FA3DF00F94067 /* AppDelegate.swift */,
-				DA89B517212FA3DF00F94067 /* ViewController.swift */,
-				DA89B519212FA3DF00F94067 /* Main.storyboard */,
-				DA89B51C212FA3E000F94067 /* Assets.xcassets */,
-				DA89B51E212FA3E000F94067 /* LaunchScreen.storyboard */,
 				DA89B521212FA3E000F94067 /* Info.plist */,
+				DA89B51C212FA3E000F94067 /* Assets.xcassets */,
+				DAE413D8212FB24300CE59D3 /* Extensions */,
+				DAE413D0212FAC3200CE59D3 /* View */,
+				DAE413CE212FAC1900CE59D3 /* Model */,
+				DAE413CF212FAC2400CE59D3 /* Controller */,
 			);
 			path = "Unsplash-coding-challenge";
+			sourceTree = "<group>";
+		};
+		DAE413CE212FAC1900CE59D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAE413CF212FAC2400CE59D3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DAE413D3212FADBC00CE59D3 /* Reuseable Cell */,
+				DAE413D1212FAD4E00CE59D3 /* CuratedPhotosCollectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAE413D0212FAC3200CE59D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA89B51E212FA3E000F94067 /* LaunchScreen.storyboard */,
+				DA89B519212FA3DF00F94067 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAE413D3212FADBC00CE59D3 /* Reuseable Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DAE413D4212FAE2000CE59D3 /* UnsplashPhotoCollectionViewCell.swift */,
+				DAE413D6212FAEB400CE59D3 /* UnsplashPhotoCollectionViewCell.xib */,
+			);
+			path = "Reuseable Cell";
+			sourceTree = "<group>";
+		};
+		DAE413D8212FB24300CE59D3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DAE413D9212FB26A00CE59D3 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +174,7 @@
 				DA89B520212FA3E000F94067 /* LaunchScreen.storyboard in Resources */,
 				DA89B51D212FA3E000F94067 /* Assets.xcassets in Resources */,
 				DA89B51B212FA3DF00F94067 /* Main.storyboard in Resources */,
+				DAE413D7212FAEB400CE59D3 /* UnsplashPhotoCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +185,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA89B518212FA3DF00F94067 /* ViewController.swift in Sources */,
+				DAE413D2212FAD4E00CE59D3 /* CuratedPhotosCollectionViewController.swift in Sources */,
 				DA89B516212FA3DF00F94067 /* AppDelegate.swift in Sources */,
+				DAE413D5212FAE2000CE59D3 /* UnsplashPhotoCollectionViewCell.swift in Sources */,
+				DAE413DA212FB26A00CE59D3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
