@@ -30,6 +30,16 @@ class CuratedPhotosCollectionViewController: UICollectionViewController {
         cell.unsplashImage.loadImageUsingCacheWithUrlString(urlString: imageString)
         return cell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboardName = "Main"
+        let storyboardId = "DetailedPhotoViewController"
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        let detailedPhotoCollectionViewController = storyboard.instantiateViewController(withIdentifier: storyboardId) as! DetailedPhotoViewController
+        detailedPhotoCollectionViewController.unsplashArray = unsplashArray
+        detailedPhotoCollectionViewController.initialImageIndex = indexPath.row
+        self.present(detailedPhotoCollectionViewController, animated: false)
+    }
 
     // MARK: Private Methods
     fileprivate func registerUnsplashCollectionViewCell(cellIdentifier: String) {
