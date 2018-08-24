@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA4014B921304AE500BF0623 /* UnsplashImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4014B821304AE500BF0623 /* UnsplashImageSource.swift */; };
+		DA4014BC21304DB200BF0623 /* UnsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4014BB21304DB200BF0623 /* UnsplashAPI.swift */; };
 		DA89B516212FA3DF00F94067 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA89B515212FA3DF00F94067 /* AppDelegate.swift */; };
 		DA89B51B212FA3DF00F94067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA89B519212FA3DF00F94067 /* Main.storyboard */; };
 		DA89B51D212FA3E000F94067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA89B51C212FA3E000F94067 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA4014B821304AE500BF0623 /* UnsplashImageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashImageSource.swift; sourceTree = "<group>"; };
+		DA4014BB21304DB200BF0623 /* UnsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPI.swift; sourceTree = "<group>"; };
 		DA89B512212FA3DF00F94067 /* Unsplash-coding-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unsplash-coding-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA89B515212FA3DF00F94067 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA89B51A212FA3DF00F94067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA4014BA21304D7800BF0623 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DA4014BB21304DB200BF0623 /* UnsplashAPI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		DA89B509212FA3DF00F94067 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +76,7 @@
 				DA89B521212FA3E000F94067 /* Info.plist */,
 				DA89B51C212FA3E000F94067 /* Assets.xcassets */,
 				DAE413D8212FB24300CE59D3 /* Extensions */,
+				DA4014BA21304D7800BF0623 /* Services */,
 				DAE413D0212FAC3200CE59D3 /* View */,
 				DAE413CE212FAC1900CE59D3 /* Model */,
 				DAE413CF212FAC2400CE59D3 /* Controller */,
@@ -74,6 +87,7 @@
 		DAE413CE212FAC1900CE59D3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA4014B821304AE500BF0623 /* UnsplashImageSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,8 +200,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE413D2212FAD4E00CE59D3 /* CuratedPhotosCollectionViewController.swift in Sources */,
+				DA4014B921304AE500BF0623 /* UnsplashImageSource.swift in Sources */,
 				DA89B516212FA3DF00F94067 /* AppDelegate.swift in Sources */,
 				DAE413D5212FAE2000CE59D3 /* UnsplashPhotoCollectionViewCell.swift in Sources */,
+				DA4014BC21304DB200BF0623 /* UnsplashAPI.swift in Sources */,
 				DAE413DA212FB26A00CE59D3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
