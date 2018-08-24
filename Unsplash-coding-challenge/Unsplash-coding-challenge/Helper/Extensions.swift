@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIImageView {
-    
     func loadImageUsingCacheWithUrlString(urlString: String){
         let imageCache = NSCache<NSString, UIImage>()
         
@@ -39,5 +38,12 @@ extension UIImageView {
         }
         task.resume()
     }
-    
+}
+
+extension UIViewController {
+    func showAlert(title: String, message: String, actionTitle: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: actionTitle, style: .cancel))
+        present(alert, animated: true, completion: nil)
+    }
 }

@@ -75,7 +75,7 @@
 				DA89B515212FA3DF00F94067 /* AppDelegate.swift */,
 				DA89B521212FA3E000F94067 /* Info.plist */,
 				DA89B51C212FA3E000F94067 /* Assets.xcassets */,
-				DAE413D8212FB24300CE59D3 /* Extensions */,
+				DAE413D8212FB24300CE59D3 /* Helper */,
 				DA4014BA21304D7800BF0623 /* Services */,
 				DAE413D0212FAC3200CE59D3 /* View */,
 				DAE413CE212FAC1900CE59D3 /* Model */,
@@ -119,12 +119,12 @@
 			path = "Reuseable Cell";
 			sourceTree = "<group>";
 		};
-		DAE413D8212FB24300CE59D3 /* Extensions */ = {
+		DAE413D8212FB24300CE59D3 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				DAE413D9212FB26A00CE59D3 /* Extensions.swift */,
 			);
-			path = Extensions;
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
